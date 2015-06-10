@@ -86,6 +86,7 @@ GameObject:
   - 92: {fileID: 36005275}
   - 124: {fileID: 36005274}
   - 81: {fileID: 36005273}
+  - 114: {fileID: 36005278}
   m_Layer: 0
   m_Name: _Main Camera
   m_TagString: MainCamera
@@ -158,6 +159,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &36005278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 36005272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252c1f73aa3ac6b438f3d5f18a171caf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numBoids: 100
+  boidPrefab: {fileID: 100008, guid: d95a8132dbb084044b9ed8042a06adf6, type: 2}
+  spawnRadius: 100
+  spawnVelocity: 10
+  minVelocity: 0
+  maxVelocity: 30
+  nearDist: 30
+  collisionDist: 5
+  velocityMatchingAmt: .00999999978
+  flockCenteringAmt: .150000006
+  collisionAvoidanceAmt: -.5
+  mouseAttractionAmt: .00999999978
+  mouseAvoidanceAmt: .75
+  mouseAvoidanceDist: 15
+  velocityLerpAmt: .25
+  ______________: 0
+  mousePos: {x: 0, y: 0, z: 0}
 --- !u!1 &317674011
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,6 +195,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 317674012}
+  - 114: {fileID: 317674013}
   m_Layer: 0
   m_Name: Boids
   m_TagString: Untagged
@@ -185,6 +215,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &317674013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 317674011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16ab307b9bc1f2743aa8ce5c3c765c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  newVelocity: {x: 0, y: 0, z: 0}
+  newPosition: {x: 0, y: 0, z: 0}
+  neighbors: []
+  collisionRisks: []
+  closest: {fileID: 0}
 --- !u!1 &1363200327
 GameObject:
   m_ObjectHideFlags: 0
